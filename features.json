@@ -1,0 +1,183 @@
+{
+  "name": "clawapp-blueclaw",
+  "version": "0.1.0",
+  "description": "Cross-platform mobile client for OpenClaw Gateway: SwiftUI iOS + H5/PWA + Node.js proxy server",
+  "features": [
+    {
+      "id": "proxy-sse",
+      "title": "Proxy Server SSE Mode",
+      "description": "SSE long-polling relay between mobile client and OpenClaw Gateway. Handles Ed25519 device signature handshake and event streaming.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "proxy-ws",
+      "title": "Proxy Server WS Passthrough",
+      "description": "WebSocket passthrough mode for H5 WS-Compat clients.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "proxy-http-post",
+      "title": "Proxy Server HTTP POST Fallback",
+      "description": "HTTP POST fallback when SSE is blocked by firewall.",
+      "priority": "high",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "ed25519-device-sign",
+      "title": "Ed25519 Device Signature",
+      "description": "Compatible with OpenClaw 2.15+ device authentication. Proxy server signs challenge from Gateway using Ed25519.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "proxy-token-auth",
+      "title": "Proxy Token Authentication",
+      "description": "Bearer token auth for mobile clients connecting to Proxy Server.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "proxy-event-buffer",
+      "title": "SSE Event Buffer & Resume",
+      "description": "200-event ring buffer enables reconnect/resume on brief disconnections.",
+      "priority": "high",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "proxy-offline-queue",
+      "title": "Offline Message Queue",
+      "description": "Messages sent while offline are queued and flushed on reconnect.",
+      "priority": "medium",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "deploy-install-script",
+      "title": "Install Script (Linux/macOS/Windows)",
+      "description": "One-command deployment script for Proxy Server.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "deploy-docker",
+      "title": "Docker Compose Deployment",
+      "description": "Production-ready Docker Compose setup for Proxy Server.",
+      "priority": "high",
+      "passes": false,
+      "owner": "proxy"
+    },
+    {
+      "id": "ios-gateway-protocol",
+      "title": "iOS Gateway WS Protocol",
+      "description": "Full OpenClaw Gateway WS protocol implementation in Swift (ported from BlueClaw).",
+      "priority": "critical",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "ios-proxy-sse-client",
+      "title": "iOS Proxy SSE Client",
+      "description": "Swift SSE client for connecting to Proxy Server. Handles reconnection and event parsing.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "ios-connection-mode-ui",
+      "title": "iOS Connection Mode Switcher",
+      "description": "UI for switching between Proxy SSE / WS Direct / SSH Tunnel modes.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "ios-chat-ui",
+      "title": "iOS Chat UI",
+      "description": "SwiftUI chat view with message bubbles, markdown rendering, and streaming text effect.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "ios-keychain-device-key",
+      "title": "iOS Keychain Ed25519 Key Storage",
+      "description": "Device Ed25519 key pair stored in iOS Keychain. Generated on first launch.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "ios-biometric",
+      "title": "iOS Biometric Auth",
+      "description": "Face ID / Touch ID lock screen before accessing the app.",
+      "priority": "high",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "ios-sessions",
+      "title": "iOS Session Management",
+      "description": "List/create/switch chat sessions.",
+      "priority": "high",
+      "passes": false,
+      "owner": "ios"
+    },
+    {
+      "id": "h5-proxy-client",
+      "title": "H5 Proxy SSE + HTTP POST Client",
+      "description": "Browser-side SSE client and HTTP POST fallback for connecting to Proxy Server.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "h5"
+    },
+    {
+      "id": "h5-offline-cache",
+      "title": "H5 IndexedDB Offline Cache",
+      "description": "Messages cached in IndexedDB. Survives page refresh and works offline.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "h5"
+    },
+    {
+      "id": "h5-markdown",
+      "title": "H5 Markdown Rendering",
+      "description": "Markdown rendering with XSS protection for AI responses.",
+      "priority": "critical",
+      "passes": false,
+      "owner": "h5"
+    },
+    {
+      "id": "h5-pwa",
+      "title": "H5 PWA Support",
+      "description": "Service worker + manifest for \"Add to Home Screen\" installation.",
+      "priority": "high",
+      "passes": false,
+      "owner": "h5"
+    },
+    {
+      "id": "h5-theme",
+      "title": "H5 Dark/Light Theme",
+      "description": "Auto-follows system theme. Manual toggle available.",
+      "priority": "high",
+      "passes": false,
+      "owner": "h5"
+    },
+    {
+      "id": "shared-protocol-types",
+      "title": "Shared Protocol TypeScript Definitions",
+      "description": "Cross-platform protocol types (frame, methods, chat-types) shared between iOS (via TS overlay) and H5.",
+      "priority": "high",
+      "passes": false,
+      "owner": "shared"
+    }
+  ]
+}
