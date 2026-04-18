@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+*.log
+.env
+.device-key.json
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+build/
+*.ipa
+*.app
+*.xcodeproj/
+*.xcworkspace/
+Pods/
+DerivedData/
+*.hprof
